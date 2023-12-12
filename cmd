@@ -148,3 +148,22 @@ Complete the Rebase:
 Save the changes in the text editor and exit. Git will then perform the rebase, combining the specified commits into one.
 
 Remember, rebasing and squashing commits can rewrite history. Be cautious when doing this, especially if you're working in a shared branch, as it alters the commit history and can cause conflicts for collaborators who have pulled the branch.
+
+
+//py
+# .gitlab-ci.yml
+
+# Specify the image to use for the job
+image: python:3.9
+
+# Define stages for the pipeline
+stages:
+  - test
+
+# Define a job under the 'test' stage
+test:
+  stage: test
+  script:
+    - python --version  # Display Python version
+    - python your_script.py
+  
